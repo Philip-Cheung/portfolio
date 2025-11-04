@@ -12,7 +12,7 @@ export default function ProjectCard({ project, isLast }) {
       onClick={handleClick}
       className={`cursor-pointer group py-8 ${!isLast ? 'border-b border-gray-200 dark:border-slate-700' : ''}`}
     >
-      <div className="flex gap-8 items-start">
+      <div className="flex gap-8 items-center">
         {/* Content - Left Side */}
         <div className="flex-1 space-y-2">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-primary dark:group-hover:text-brand-primary transition-colors">
