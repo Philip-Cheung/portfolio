@@ -39,7 +39,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="flex-1 mb-16">
+    <nav className="mb-8">
       <ul className="space-y-6">
         {navItems.map((item) => (
           <li key={item.id}>
