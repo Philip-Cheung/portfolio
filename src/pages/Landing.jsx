@@ -31,9 +31,13 @@ export default function Landing() {
                 </h2>
                 <div className="h-1 w-16 bg-brand-primary"></div>
               </div>
-              <div className="space-y-16">
-                {workExperiences.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+              <div>
+                {workExperiences.map((project, index) => (
+                  <ProjectCard 
+                    key={project.id} 
+                    project={project} 
+                    isLast={index === workExperiences.length - 1}
+                  />
                 ))}
               </div>
             </section>
