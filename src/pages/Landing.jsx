@@ -13,13 +13,13 @@ export default function Landing() {
       <DarkModeToggle />
 
       {/* Left Sidebar - Sticky Resume */}
-      <div className="w-full md:w-[280px] lg:w-[320px]">
+      <div className="w-full md:w-[340px] lg:w-[380px]">
         <StickyResume />
       </div>
 
       {/* Right Content - Scrollable Sections */}
       <div className="flex-1 overflow-y-auto">
-        <div className="max-w-4xl mx-auto px-8 md:px-12 lg:px-16 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto pl-6 md:pl-8 pr-8 md:pr-12 lg:pr-16 py-16 md:py-24">
           {/* About Section */}
           <section id="about" className="mb-24 scroll-mt-24">
             <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-6">

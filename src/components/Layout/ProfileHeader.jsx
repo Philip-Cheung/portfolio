@@ -4,7 +4,7 @@ export default function ProfileHeader() {
   const { personal } = portfolioData;
 
   return (
-    <div className="mb-16 text-right">
+    <div className="mb-16 text-right mt-8 md:mt-12">
       <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
         {personal.name}
       </h1>
