@@ -61,25 +61,12 @@ describe('DarkModeToggle', () => {
     expect(document.documentElement.classList.contains('dark')).toBe(true);
   });
 
-  it('respects system preference when no localStorage value', () => {
-    // Mock matchMedia to return dark preference
-    const mockMatchMedia = vi.fn().mockImplementation(query => ({
-      matches: query === '(prefers-color-scheme: dark)',
-      media: query,
-      onchange: null,
-      addListener: vi.fn(),
-      removeListener: vi.fn(),
-      addEventListener: vi.fn(),
-      removeEventListener: vi.fn(),
-      dispatchEvent: vi.fn(),
-    }));
-    
-    window.matchMedia = mockMatchMedia;
-    
+  it('does not apply dark mode when no localStorage value', () => {
+    // With simplified implementation, no localStorage means light mode
     render(<DarkModeToggle />);
     
-    // Should respect system preference
-    expect(document.documentElement.classList.contains('dark')).toBe(true);
+    // Should default to light mode when no saved preference
+    expect(document.documentElement.classList.contains('dark')).toBe(false);
   });
 
   it('has proper hover styling', () => {

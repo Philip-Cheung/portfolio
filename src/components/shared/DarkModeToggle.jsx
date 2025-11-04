@@ -2,28 +2,49 @@ import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  // Initialize state from the HTML element's class list
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return document.documentElement.classList.contains('dark');
+    }
+    return false;
+  });
 
+  // On mount, check localStorage and apply saved preference
   useEffect(() => {
-    // Check if user has a preference
-    const isDarkMode = localStorage.getItem('darkMode') === 'true' || 
-                       (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    setIsDark(isDarkMode);
-    if (isDarkMode) {
+    const savedMode = localStorage.getItem('darkMode');
+    console.log('Initial load - savedMode:', savedMode);
+    
+    if (savedMode === 'true') {
       document.documentElement.classList.add('dark');
+      setIsDark(true);
+    } else if (savedMode === 'false') {
+      document.documentElement.classList.remove('dark');
+      setIsDark(false);
     }
   }, []);
 
   const toggleDarkMode = () => {
+    console.log('🌓 Toggle clicked! Current isDark:', isDark);
+    
     const newDarkMode = !isDark;
     setIsDark(newDarkMode);
-    localStorage.setItem('darkMode', newDarkMode.toString());
+    
+    console.log('🌓 Setting new mode:', newDarkMode);
     
     if (newDarkMode) {
       document.documentElement.classList.add('dark');
+      console.log('🌙 Added dark class to HTML');
     } else {
       document.documentElement.classList.remove('dark');
+      console.log('☀️ Removed dark class from HTML');
     }
+    
+    localStorage.setItem('darkMode', String(newDarkMode));
+    console.log('💾 Saved to localStorage:', newDarkMode);
+    
+    // Verify it worked
+    console.log('✅ HTML classList:', document.documentElement.classList.toString());
   };
 
   return (
@@ -31,6 +52,7 @@ export default function DarkModeToggle() {
       onClick={toggleDarkMode}
       className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 shadow-lg hover:shadow-xl transition-all hover:scale-110"
       aria-label="Toggle dark mode"
+      type="button"
     >
       {isDark ? (
         <Sun className="w-5 h-5 text-amber-500" />
@@ -40,4 +62,3 @@ export default function DarkModeToggle() {
     </button>
   );
 }
-
