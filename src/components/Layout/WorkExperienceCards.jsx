@@ -11,7 +11,7 @@ export default function WorkExperienceCards() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {workExperiences.map((experience) => (
         <div
           key={experience.id}
