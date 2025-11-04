@@ -19,12 +19,15 @@ export default function Landing() {
 
       {/* Right Content - Scrollable Sections */}
       <div className="flex-1 overflow-y-auto">
-        <div className="max-w-4xl mx-auto pl-6 md:pl-8 pr-8 md:pr-12 lg:pr-16 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto pl-4 md:pl-6 pr-8 md:pr-12 lg:pr-16 py-16 md:py-24">
           {/* About Section */}
           <section id="about" className="mb-24 scroll-mt-24">
-            <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-6">
-              About
-            </h2>
+            <div className="mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                About
+              </h2>
+              <div className="h-1 w-16 bg-brand-primary"></div>
+            </div>
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                 {personal.bio}
@@ -34,17 +37,23 @@ export default function Landing() {
 
           {/* Experience Section */}
           <section id="experience" className="mb-24 scroll-mt-24">
-            <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-8">
-              Experience
-            </h2>
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                Experience
+              </h2>
+              <div className="h-1 w-16 bg-brand-primary"></div>
+            </div>
             <WorkExperienceCards />
           </section>
 
           {/* Education Section */}
           <section id="education" className="mb-24 scroll-mt-24">
-            <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-8">
-              Education
-            </h2>
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                Education
+              </h2>
+              <div className="h-1 w-16 bg-brand-primary"></div>
+            </div>
             <EducationSection />
           </section>
         </div>

@@ -45,9 +45,16 @@ export default function Navigation() {
           <li key={item.id}>
             <button
               onClick={() => scrollToSection(item.id)}
-              className="group flex items-center justify-end gap-4 text-right w-full transition-all"
+              className="group flex items-center justify-start gap-4 text-left w-full transition-all"
               aria-label={`Navigate to ${item.label}`}
             >
+              <span 
+                className={`h-px bg-gray-400 dark:bg-gray-600 transition-all duration-300 ${
+                  activeSection === item.id 
+                    ? 'w-16 bg-gray-900 dark:bg-white' 
+                    : 'w-8 group-hover:w-16 group-hover:bg-gray-900 dark:group-hover:bg-white'
+                }`}
+              />
               <span 
                 className={`text-xs font-semibold tracking-widest transition-colors ${
                   activeSection === item.id
@@ -57,13 +64,6 @@ export default function Navigation() {
               >
                 {item.label}
               </span>
-              <span 
-                className={`h-px bg-gray-400 dark:bg-gray-600 transition-all duration-300 ${
-                  activeSection === item.id 
-                    ? 'w-16 bg-gray-900 dark:bg-white' 
-                    : 'w-8 group-hover:w-16 group-hover:bg-gray-900 dark:group-hover:bg-white'
-                }`}
-              />
             </button>
           </li>
         ))}
