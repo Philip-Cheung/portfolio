@@ -1,11 +1,12 @@
 import StickyResume from '../components/Layout/StickyResume';
 import WorkExperienceCards from '../components/Layout/WorkExperienceCards';
 import EducationSection from '../components/Layout/EducationSection';
+import ProjectCard from '../components/Layout/ProjectCard';
 import DarkModeToggle from '../components/shared/DarkModeToggle';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Landing() {
-  const { personal } = portfolioData;
+  const { workExperiences } = portfolioData;
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors">
@@ -22,18 +23,18 @@ export default function Landing() {
 
           {/* Right Column - Content */}
           <div className="py-8 lg:py-16">
-            {/* About Section */}
-            <section id="about" className="mb-24 scroll-mt-24">
-              <div className="mb-6">
+            {/* Design Projects Section */}
+            <section id="projects" className="mb-24 scroll-mt-24">
+              <div className="mb-8">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  About
+                  Design Projects
                 </h2>
                 <div className="h-1 w-16 bg-brand-primary"></div>
               </div>
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  {personal.bio}
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {workExperiences.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
               </div>
             </section>
 

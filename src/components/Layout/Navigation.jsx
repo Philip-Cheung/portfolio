@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 export default function Navigation() {
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState('projects');
 
   const navItems = [
-    { id: 'about', label: 'ABOUT' },
+    { id: 'projects', label: 'DESIGN PROJECTS' },
     { id: 'experience', label: 'EXPERIENCE' },
     { id: 'education', label: 'EDUCATION' },
   ];

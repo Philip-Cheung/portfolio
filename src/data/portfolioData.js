@@ -48,6 +48,9 @@ export const portfolioData = {
   workExperiences: [
     {
       id: "project1",
+      title: "FedRAMP for Product Managers",
+      date: "April 2024",
+      type: "LinkedIn Article",
       company: "TechCorp Enterprise",
       role: "Senior Product Designer",
       dates: "2022 - 2024",
@@ -59,6 +62,9 @@ export const portfolioData = {
     },
     {
       id: "project2",
+      title: "Mobile Collaboration Platform",
+      date: "2020 - 2022",
+      type: "Product Design",
       company: "InnovateLabs",
       role: "Product Designer",
       dates: "2020 - 2022",
@@ -67,6 +73,34 @@ export const portfolioData = {
       tags: ["Mobile Design", "User Research", "Prototyping", "Collaboration"],
       companyUrl: "https://cursor.ai",
       link: "/project/project2"
+    },
+    {
+      id: "project3",
+      title: "Design System Evolution",
+      date: "2019 - 2020",
+      type: "Design Systems",
+      company: "DesignCo",
+      role: "Product Designer",
+      dates: "2019 - 2020",
+      location: "Austin, TX",
+      description: "Built and scaled a comprehensive design system used across 15+ product teams, reducing design-to-development time by 40%.",
+      tags: ["Design Systems", "Component Library", "Documentation", "Figma"],
+      companyUrl: "https://cursor.ai",
+      link: "/project/project3"
+    },
+    {
+      id: "project4",
+      title: "E-commerce Checkout Optimization",
+      date: "2018 - 2019",
+      type: "UX Research & Design",
+      company: "ShopFlow",
+      role: "UX Designer",
+      dates: "2018 - 2019",
+      location: "Remote",
+      description: "Redesigned the checkout flow based on user research, increasing conversion rates by 28% and reducing cart abandonment.",
+      tags: ["UX Research", "A/B Testing", "Conversion Optimization", "E-commerce"],
+      companyUrl: "https://cursor.ai",
+      link: "/project/project4"
     }
   ],
   
