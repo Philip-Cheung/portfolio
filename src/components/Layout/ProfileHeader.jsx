@@ -5,7 +5,7 @@ export default function ProfileHeader() {
 
   return (
     <div className="mb-16 mt-8 md:mt-12">
-      <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+      <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 whitespace-nowrap">
         {personal.name}
       </h1>
       <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
