@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Enterprise card styling */
+  .card-enterprise {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm;
+    @apply hover:shadow-xl hover:border-brand-primary;
+    @apply transition-all duration-300;
+  }
+  
+  /* Button styles with enterprise feel */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg;
+    @apply bg-brand-primary text-white font-medium;
+    @apply hover:bg-brand-secondary hover:shadow-lg;
+    @apply transition-all duration-200 hover:scale-105;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg;
+    @apply bg-gray-200 text-gray-800 font-medium;
+    @apply hover:bg-gray-300 hover:shadow-md;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2;
+  }
+  
+  /* Sparkle effect for enterprise apps */
+  .accent-spark {
+    @apply relative;
+  }
+  
+  .accent-spark::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-brand-primary to-brand-secondary;
+    @apply rounded-lg opacity-0 blur transition-opacity duration-300;
+  }
+  
+  .accent-spark:hover::before {
+    @apply opacity-20;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar for enterprise feel */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-primary;
+  }
+}

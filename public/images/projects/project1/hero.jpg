@@ -1,0 +1,8 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#f0f4f8"/>
+  <rect x="160" y="120" width="1600" height="840" rx="12" fill="white"/>
+  <rect x="200" y="160" width="400" height="40" rx="8" fill="#6366f1"/>
+  <rect x="200" y="240" width="1520" height="640" rx="8" fill="#e5e7eb"/>
+  <text x="960" y="600" font-family="Inter, Arial, sans-serif" font-size="48" fill="#6b7280" text-anchor="middle">Dashboard Redesign Hero</text>
+</svg>
+

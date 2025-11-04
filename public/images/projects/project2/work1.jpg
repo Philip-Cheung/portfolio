@@ -1,0 +1,7 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#1e1b29"/>
+  <rect x="250" y="50" width="300" height="600" rx="30" fill="white"/>
+  <rect x="650" y="50" width="300" height="600" rx="30" fill="white"/>
+  <text x="600" y="720" font-family="Inter, Arial, sans-serif" font-size="28" fill="#e9d5ff" text-anchor="middle">Core Interface Flows</text>
+</svg>
+

@@ -1,0 +1,9 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#f9fafb"/>
+  <text x="600" y="400" font-family="Inter, Arial, sans-serif" font-size="32" fill="#6b7280" text-anchor="middle">Navigation Structure</text>
+  <rect x="100" y="100" width="1000" height="600" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+  <circle cx="200" cy="200" r="40" fill="#6366f1" opacity="0.3"/>
+  <circle cx="400" cy="200" r="40" fill="#8b5cf6" opacity="0.3"/>
+  <circle cx="600" cy="200" r="40" fill="#6366f1" opacity="0.3"/>
+</svg>
+
