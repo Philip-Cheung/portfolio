@@ -31,7 +31,7 @@ export default function Landing() {
                 </h2>
                 <div className="h-1 w-16 bg-brand-primary"></div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-16">
                 {workExperiences.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
