@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks';
 
 export default function StickyResume() {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col">
       <ProfileHeader />
       <Navigation />
       <SocialLinks />

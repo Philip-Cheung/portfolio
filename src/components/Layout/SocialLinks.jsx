@@ -20,7 +20,7 @@ export default function SocialLinks() {
   ];
 
   return (
-    <div className="flex items-center justify-start gap-6 mt-auto">
+    <div className="flex items-center justify-start gap-6">
       {links.map((link) => {
         const Icon = link.icon;
         const props = link.external ? {
