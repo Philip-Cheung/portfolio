@@ -25,7 +25,7 @@ export default function Landing() {
             {/* About Section */}
             <section id="about" className="mb-24 scroll-mt-24">
               <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   About
                 </h2>
                 <div className="h-1 w-16 bg-brand-primary"></div>
@@ -40,7 +40,7 @@ export default function Landing() {
             {/* Experience Section */}
             <section id="experience" className="mb-24 scroll-mt-24">
               <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   Experience
                 </h2>
                 <div className="h-1 w-16 bg-brand-primary"></div>
@@ -51,7 +51,7 @@ export default function Landing() {
             {/* Education Section */}
             <section id="education" className="mb-24 scroll-mt-24">
               <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   Education
                 </h2>
                 <div className="h-1 w-16 bg-brand-primary"></div>
