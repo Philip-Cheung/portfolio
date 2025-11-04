@@ -1,17 +1,22 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../../data/portfolioData';
 
 export default function WorkExperienceCards() {
   const { workExperiences } = portfolioData;
+  const navigate = useNavigate();
+
+  const handleCardClick = (link) => {
+    navigate(link);
+  };
 
   return (
     <div className="space-y-8">
       {workExperiences.map((experience) => (
-        <Link
+        <div
           key={experience.id}
-          to={experience.link}
-          className="block group"
+          onClick={() => handleCardClick(experience.link)}
+          className="block group cursor-pointer"
         >
           <div className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/30 shadow-sm hover:shadow-xl hover:border-brand-primary dark:hover:border-brand-primary transition-all duration-300">
             {/* Header */}
@@ -62,7 +67,7 @@ export default function WorkExperienceCards() {
               ))}
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
