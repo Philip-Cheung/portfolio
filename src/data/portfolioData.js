@@ -2,7 +2,7 @@ export const portfolioData = {
   personal: {
     name: "Philip Cheung",
     title: "Product Designer",
-    bio: "I'm a product designer focused on creating intuitive, user-centered experiences that solve real problems. I believe great design is invisible—it just works. With a background in enterprise software and consumer applications, I bring a balanced approach to crafting products that users love.",
+    bio: "5 years of experience across Digital Assets, Construction, Hardware IoT, and Government.",
     imageUrl: "/images/profile/profile.jpg",
     email: "philip@example.com",
     links: {
