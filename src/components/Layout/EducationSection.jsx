@@ -4,9 +4,9 @@ export default function EducationSection() {
   const { education, certifications } = portfolioData;
 
   return (
-    <div className="bg-slate-800/30 rounded-xl p-8 border border-slate-700">
-      {/* Education */}
-      <div className="mb-10">
+    <div className="space-y-8">
+      {/* Education Card */}
+      <div className="bg-slate-800/30 rounded-xl p-8 border border-slate-700">
         <h3 className="text-xl font-bold text-white mb-6">
           Education
         </h3>
@@ -24,8 +24,8 @@ export default function EducationSection() {
         </div>
       </div>
 
-      {/* Certifications */}
-      <div>
+      {/* Certifications Card */}
+      <div className="bg-slate-800/30 rounded-xl p-8 border border-slate-700">
         <h3 className="text-xl font-bold text-white mb-6">
           Certifications
         </h3>
