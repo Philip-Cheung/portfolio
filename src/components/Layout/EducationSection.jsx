@@ -6,7 +6,7 @@ export default function EducationSection() {
   return (
     <div className="space-y-8">
       {/* Education Card */}
-      <div className="bg-slate-800/30 rounded-xl p-8 border border-slate-700">
+      <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
         <h3 className="text-xl font-bold text-white mb-6">
           Education
         </h3>
@@ -25,7 +25,7 @@ export default function EducationSection() {
       </div>
 
       {/* Certifications Card */}
-      <div className="bg-slate-800/30 rounded-xl p-8 border border-slate-700">
+      <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
         <h3 className="text-xl font-bold text-white mb-6">
           Certifications
         </h3>

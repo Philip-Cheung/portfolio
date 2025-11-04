@@ -18,7 +18,7 @@ export default function WorkExperienceCards() {
           onClick={() => handleCardClick(experience.link)}
           className="block group cursor-pointer"
         >
-          <div className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/30 shadow-sm hover:shadow-xl hover:border-brand-primary dark:hover:border-brand-primary transition-all duration-300">
+          <div className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 shadow-sm hover:shadow-xl hover:border-brand-primary dark:hover:border-brand-primary transition-all duration-300">
             {/* Header */}
             <div className="flex items-start justify-between gap-4 mb-4">
               <div className="flex-1">
