@@ -17,12 +17,12 @@ export default function Landing() {
       <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 lg:gap-16 xl:gap-20">
           {/* Left Column - Sidebar */}
-          <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:py-16 py-8 lg:border-r lg:border-gray-200 lg:dark:border-slate-700 lg:pr-8">
+          <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto lg:py-16 py-8 lg:border-r lg:border-gray-200 lg:dark:border-slate-700 lg:pr-16">
             <StickyResume />
           </div>
 
           {/* Right Column - Content */}
-          <div className="py-8 lg:py-16 lg:pl-8">
+          <div className="py-8 lg:py-16 lg:pl-16">
             {/* Design Projects Section */}
             <section id="projects" className="mb-24 scroll-mt-24">
               <div className="mb-8">
