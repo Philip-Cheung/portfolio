@@ -13,15 +13,15 @@ export default function Landing() {
       <DarkModeToggle />
 
       {/* Left Sidebar - Sticky Resume */}
-      <div className="w-full md:w-1/3 lg:w-1/4">
+      <div className="w-full md:w-[280px] lg:w-[320px]">
         <StickyResume />
       </div>
 
       {/* Right Content - Scrollable Sections */}
-      <div className="w-full md:w-2/3 lg:w-3/4 overflow-y-auto">
-        <div className="max-w-4xl mx-auto px-8 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="flex-1 overflow-y-auto">
+        <div className="max-w-2xl mx-auto px-6 md:px-8 py-12 md:py-16">
           {/* About Section */}
-          <section id="about" className="mb-24 scroll-mt-24">
+          <section id="about" className="mb-16 scroll-mt-24">
             <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-6">
               About
             </h2>
@@ -33,7 +33,7 @@ export default function Landing() {
           </section>
 
           {/* Experience Section */}
-          <section id="experience" className="mb-24 scroll-mt-24">
+          <section id="experience" className="mb-16 scroll-mt-24">
             <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-8">
               Experience
             </h2>
@@ -41,7 +41,7 @@ export default function Landing() {
           </section>
 
           {/* Education Section */}
-          <section id="education" className="mb-24 scroll-mt-24">
+          <section id="education" className="mb-16 scroll-mt-24">
             <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-8">
               Education
             </h2>
