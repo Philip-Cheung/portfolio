@@ -38,7 +38,10 @@ export const portfolioData = {
       company: "TechCorp Enterprise",
       role: "Senior Product Designer",
       dates: "2022 - 2024",
+      location: "San Francisco, CA",
       description: "Led the redesign of the core dashboard platform, improving user engagement by 45% and reducing support tickets by 30%.",
+      tags: ["Product Strategy", "Design Systems", "B2B SaaS", "Enterprise"],
+      companyUrl: "https://cursor.ai",
       link: "/project/project1"
     },
     {
@@ -46,7 +49,10 @@ export const portfolioData = {
       company: "InnovateLabs",
       role: "Product Designer",
       dates: "2020 - 2022",
+      location: "New York, NY",
       description: "Designed and shipped a mobile-first collaboration tool used by over 100,000 teams worldwide.",
+      tags: ["Mobile Design", "User Research", "Prototyping", "Collaboration"],
+      companyUrl: "https://cursor.ai",
       link: "/project/project2"
     }
   ],

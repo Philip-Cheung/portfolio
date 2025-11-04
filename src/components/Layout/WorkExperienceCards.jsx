@@ -1,47 +1,65 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Briefcase } from 'lucide-react';
+import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../../data/portfolioData';
 
 export default function WorkExperienceCards() {
   const { workExperiences } = portfolioData;
 
   return (
-    <div className="space-y-6">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Work Experience</h2>
-        <p className="text-gray-600">Selected projects showcasing my design journey</p>
-      </div>
-
+    <div className="space-y-8">
       {workExperiences.map((experience) => (
         <Link
           key={experience.id}
           to={experience.link}
           className="block group"
         >
-          <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-xl hover:border-brand-primary transition-all duration-300 hover:-translate-y-1">
-            <div className="flex items-start justify-between mb-4">
+          <div className="p-6 rounded-xl hover:bg-gray-50 dark:hover:bg-navy-900/50 transition-all duration-300 hover:shadow-lg dark:hover:shadow-navy-950/50">
+            {/* Header */}
+            <div className="flex items-start justify-between gap-4 mb-4">
               <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center">
-                    <Briefcase className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors">
-                      {experience.company}
-                    </h3>
-                    <p className="text-sm text-gray-500">{experience.dates}</p>
-                  </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <a
+                    href={experience.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-lg font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors inline-flex items-center gap-2"
+                  >
+                    {experience.company}
+                    <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                  <span className="text-gray-400 dark:text-gray-600">•</span>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    {experience.location}
+                  </span>
                 </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                  {experience.dates}
+                </p>
               </div>
-              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-brand-primary group-hover:translate-x-1 transition-all" />
+              <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-brand-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all flex-shrink-0" />
             </div>
 
-            <p className="text-brand-primary font-medium mb-3">{experience.role}</p>
-            <p className="text-gray-600 leading-relaxed">{experience.description}</p>
+            {/* Role */}
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-3">
+              {experience.role}
+            </h3>
 
-            <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-primary group-hover:gap-3 transition-all">
-              View Project
-              <ArrowRight className="w-4 h-4" />
+            {/* Description */}
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              {experience.description}
+            </p>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2">
+              {experience.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-brand-primary/10 text-brand-primary dark:bg-brand-primary/20 dark:text-brand-primary hover:bg-brand-primary hover:text-white dark:hover:bg-brand-primary transition-colors"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </Link>
@@ -49,4 +67,3 @@ export default function WorkExperienceCards() {
     </div>
   );
 }
-

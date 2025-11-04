@@ -1,88 +1,90 @@
-import { Mail, Linkedin, Github, Globe } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import { portfolioData } from '../../data/portfolioData';
+import { useState } from 'react';
 
 export default function StickyResume() {
-  const { personal, skills, education } = portfolioData;
+  const { personal } = portfolioData;
+  const [activeSection, setActiveSection] = useState('about');
+
+  const navItems = [
+    { id: 'about', label: 'ABOUT' },
+    { id: 'experience', label: 'EXPERIENCE' },
+    { id: 'education', label: 'EDUCATION' },
+  ];
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveSection(sectionId);
+    }
+  };
 
   return (
-    <div className="sticky top-0 h-screen overflow-y-auto scrollbar-thin bg-white border-r border-gray-200 p-8">
-      {/* Profile Section */}
-      <div className="mb-8">
-        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary mb-6 flex items-center justify-center text-white text-4xl font-bold">
-          {personal.name.split(' ').map(n => n[0]).join('')}
-        </div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">{personal.name}</h1>
-        <p className="text-lg text-brand-primary font-medium mb-4">{personal.title}</p>
-        <p className="text-gray-600 leading-relaxed">{personal.bio}</p>
+    <div className="sticky top-0 h-screen overflow-y-auto scrollbar-thin bg-white dark:bg-navy-950 border-r border-gray-200 dark:border-navy-800 p-12 flex flex-col">
+      {/* Header */}
+      <div className="mb-16">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          {personal.name}
+        </h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+          {personal.title}
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          {personal.bio.split('.')[0]}.
+        </p>
       </div>
 
-      {/* Contact Links */}
-      <div className="mb-8 space-y-3">
-        <a 
-          href={`mailto:${personal.email}`}
-          className="flex items-center gap-3 text-gray-700 hover:text-brand-primary transition-colors group"
-        >
-          <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          <span className="text-sm">{personal.email}</span>
-        </a>
-        <a 
+      {/* Navigation */}
+      <nav className="flex-1 mb-16">
+        <ul className="space-y-6">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <button
+                onClick={() => scrollToSection(item.id)}
+                className="group flex items-center gap-4 text-left w-full transition-all"
+              >
+                <span 
+                  className={`h-px bg-gray-400 dark:bg-gray-600 transition-all duration-300 ${
+                    activeSection === item.id 
+                      ? 'w-16 bg-gray-900 dark:bg-white' 
+                      : 'w-8 group-hover:w-16 group-hover:bg-gray-900 dark:group-hover:bg-white'
+                  }`}
+                />
+                <span 
+                  className={`text-xs font-semibold tracking-widest transition-colors ${
+                    activeSection === item.id
+                      ? 'text-gray-900 dark:text-white'
+                      : 'text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'
+                  }`}
+                >
+                  {item.label}
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Social Links */}
+      <div className="flex items-center gap-6 mt-auto">
+        <a
           href={personal.links.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 text-gray-700 hover:text-brand-primary transition-colors group"
+          className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+          aria-label="LinkedIn"
         >
-          <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          <span className="text-sm">LinkedIn</span>
+          <Linkedin className="w-6 h-6" />
         </a>
-        <a 
-          href={personal.links.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 text-gray-700 hover:text-brand-primary transition-colors group"
+        <a
+          href={`mailto:${personal.email}`}
+          className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+          aria-label="Email"
         >
-          <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-          <span className="text-sm">GitHub</span>
+          <Mail className="w-6 h-6" />
         </a>
-        {personal.links.portfolio && (
-          <a 
-            href={personal.links.portfolio}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 text-gray-700 hover:text-brand-primary transition-colors group"
-          >
-            <Globe className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            <span className="text-sm">Portfolio</span>
-          </a>
-        )}
-      </div>
-
-      {/* Skills */}
-      <div className="mb-8">
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">Skills</h2>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill, index) => (
-            <span 
-              key={index}
-              className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-brand-primary hover:text-white transition-colors cursor-default"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Education */}
-      <div>
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">Education</h2>
-        {education.map((edu, index) => (
-          <div key={index} className="mb-4">
-            <h3 className="font-semibold text-gray-900">{edu.school}</h3>
-            <p className="text-sm text-gray-600">{edu.degree} in {edu.field}</p>
-            <p className="text-sm text-gray-500">{edu.year}</p>
-          </div>
-        ))}
       </div>
     </div>
   );
 }
-
