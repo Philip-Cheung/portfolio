@@ -8,7 +8,7 @@ export default function Landing() {
   const { personal } = portfolioData;
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-white dark:bg-navy-950 transition-colors">
+    <div className="flex flex-col md:flex-row min-h-screen bg-white dark:bg-slate-900 transition-colors">
       {/* Dark Mode Toggle */}
       <DarkModeToggle />
 

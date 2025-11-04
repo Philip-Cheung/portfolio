@@ -14,7 +14,7 @@ export default function EducationSection() {
   return (
     <div className="space-y-12">
       {/* Education Block */}
-      <div className="bg-gray-50 dark:bg-navy-900/30 rounded-xl p-8 border border-gray-100 dark:border-navy-800">
+      <div className="bg-gray-50 dark:bg-slate-800/30 rounded-xl p-8 border border-gray-100 dark:border-slate-700">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
           Education & Certifications
         </h2>
@@ -64,7 +64,7 @@ export default function EducationSection() {
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="px-4 py-2 text-sm font-medium rounded-lg bg-white dark:bg-navy-900 border border-gray-200 dark:border-navy-800 text-gray-700 dark:text-gray-300 hover:border-brand-primary dark:hover:border-brand-primary hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
+              className="px-4 py-2 text-sm font-medium rounded-lg bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:border-brand-primary dark:hover:border-brand-primary hover:text-brand-primary dark:hover:text-brand-primary transition-colors"
             >
               {skill}
             </span>
