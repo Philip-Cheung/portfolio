@@ -25,11 +25,24 @@ export const portfolioData = {
   
   education: [
     {
-      school: "Design University",
-      degree: "Bachelor of Design",
-      field: "Interaction Design",
-      year: "2018"
+      degree: "Bachelor of Science, Management Information Systems",
+      school: "Rochester Institute of Technology",
+      year: "2010"
+    },
+    {
+      degree: "Supervised Machine Learning: Regression and Classification",
+      school: "Stanford Online / DeepLearning.AI",
+      year: "2024"
     }
+  ],
+  
+  certifications: [
+    "Advanced Certified Scrum Master (A-CSM)",
+    "Advanced Certified Scrum Product Owner (A-CSPO)",
+    "Certified Scrum Master (CSM)",
+    "Certified Scrum Product Owner (CSPO)",
+    "Certified Professional — Agile Testing & Test Automation (ICAgile)",
+    "ITIL Foundation"
   ],
   
   workExperiences: [
