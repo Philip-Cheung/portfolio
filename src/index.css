@@ -14,6 +14,16 @@
   }
 }
 
+/* Force dark mode test - remove after confirming it works */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
 @layer components {
   /* Enterprise card styling */
   .card-enterprise {
