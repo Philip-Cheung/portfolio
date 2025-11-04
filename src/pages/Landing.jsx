@@ -8,7 +8,7 @@ export default function Landing() {
   const { personal } = portfolioData;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors">
+    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900 dark:to-purple-900/20 transition-colors">
       {/* Dark Mode Toggle */}
       <DarkModeToggle />
 
